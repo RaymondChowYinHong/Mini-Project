@@ -87,24 +87,8 @@ int main()
 
         Person Patient;
 
-        // double medcine_charge=0, surgery_charge=0, service_charge=0, hospitalstay_charge=0, fooddrink_charge=0, Total_Charge=0;
-
         int counter = 0;
-        // int number_item;
 
-        // do
-        // {
-        //     if(cin.fail())
-        //     {
-        //         cin.clear();
-        //         cin.ignore();
-        //     }
-            
-        //     cout << "How many item?"<<endl;
-        //     cin >> number_item;
-        // } while (cin.fail());
-
-        // int menu_choice_array[number_item];
         int* menu_choice_array = new int[1];
         int* submenu_choice_array = new int[1];
         double* amount_array = new double[1];
@@ -131,12 +115,6 @@ int main()
             } while (cin.fail());
 
             int charge=0;
-
-            // if( menu_choice==1 || menu_choice == 2 || menu_choice == 3|| menu_choice==4|| menu_choice ==5)
-            // {
-            //     int size = counter+1;
-            //     int* menu_choice_array = new int[size];
-            // }
 
             switch(menu_choice)
             {
@@ -196,15 +174,6 @@ int main()
                     counter++;
                     break;
                 case 6:
-                    //Total charges
-                    // if(number_item != (counter))
-                    // {
-                    //     cout << "Amount of item selected is not equal to number of item stated." << endl;
-                    //     cout << "Current calculation of charges will be canceled." << endl;
-                    //     cout << endl;
-                    //     exit_status = 'Y';
-                    //     break;
-                    // }
 
                     for(size_t j = 0; j < counter; j++)
                     {
