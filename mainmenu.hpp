@@ -6,10 +6,10 @@ using namespace std;
 
 void display_tittle()
 {
-    cout << " Welcome to EEE123 Group 12 Hospital " <<endl;
+    cout << "                           Welcome to EEE123 Group 12 Hospital " <<endl;
     for(size_t i = 0; i < 100; i++)
     {
-        cout << "_";
+        cout << "-";
     }
 
     cout << endl;
