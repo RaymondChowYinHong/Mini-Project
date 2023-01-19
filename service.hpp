@@ -7,7 +7,7 @@ using namespace std;
 
 void display_service_menu()
 {
-    cout<<"Select your choice."<<endl;
+    cout<<"Select your service choice."<<endl;
     cout<<" 1. Consultation\tRM 1\n 2. X-Ray\t\tRM 35\n 3. Ultrasound\t\tRM 10\n 4. Angiography\t\tRM 75\n 5. Blood Test\t\tRM 1\n 6. CT Scan\t\tRM 450\n";
 }
 
