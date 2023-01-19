@@ -3,6 +3,7 @@
 //GitHub Username: RaymondChowYinHong
 //Matric No.: 165011
 #include <iostream>
+#include "LoginRegister.hpp"
 #include "main.hpp"
 #include "mainmenu.hpp"
 #include "medcine.hpp"
@@ -13,7 +14,6 @@
 #include "DisplayItem.hpp"
 #include "CalcTotalCharges.hpp"
 #include "CheckPatient.hpp"
-#include "LoginRegister.hpp"
 
 using namespace std;
 
