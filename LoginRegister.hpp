@@ -62,7 +62,8 @@ int LOGIN_REGISTER()
             cin.clear();
             cin.ignore();
         }
-        cout << "1 : Register \n2 :Login\nYour choice :";
+        display_tittle();
+        cout << "1 : Register \n2 : Login\nYour choice :";
         cin>>choice;
         }while(choice!=1 && choice!=2);
     
