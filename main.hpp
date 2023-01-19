@@ -5,6 +5,7 @@
 bool IsloggedIn();
 int LOGIN_REGISTER ();
 
+void display_tittle();
 void display_menu();
 
 void display_medcine_menu();
