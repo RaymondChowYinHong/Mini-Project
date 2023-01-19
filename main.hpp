@@ -17,3 +17,6 @@ double Calc_fooddrink_charge(double , int, int &, double &);
 
 void Display_patient_item(int, int, double, size_t);
 double Calc_Total_Charge(double , double , double , double , double );
+
+void display_checkpatient_menu();
+int Check_new_patient();

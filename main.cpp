@@ -12,6 +12,7 @@
 #include "fooddrink.hpp"
 #include "DisplayItem.hpp"
 #include "CalcTotalCharges.hpp"
+#include "CheckPatient.hpp"
 using namespace std;
 
 class Person
@@ -260,20 +261,9 @@ int main()
         delete []submenu_choice_array;
         delete []amount_array;
 
-        do{
 
-        if(cin.fail())
-        {
-            cin.clear();
-            cin.ignore();
-        }
-
-        cout << "Any new patient?" << endl;
-        cout << "1.Yes\n2.No" << endl;
-        cin >> choice_new_patient;
-        cout << endl;
-
-        }while(choice_new_patient!=1 && choice_new_patient!=2);
+            
+        choice_new_patient = Check_new_patient();
 
         switch(choice_new_patient)
         {
