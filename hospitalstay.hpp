@@ -1,3 +1,7 @@
+//Name:
+//USM Email: 
+//GitHub Username: 
+//Matric No.:
 #ifndef HOSPITALSTAY_HPP
 #define HOSPITALSTAY_HPP
 

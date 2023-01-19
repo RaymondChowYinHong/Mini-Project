@@ -1,3 +1,7 @@
+//Name:
+//USM Email: 
+//GitHub Username: 
+//Matric No.:
 #ifndef MEDCINE_HPP
 #define MEDCINE_HPP
 
