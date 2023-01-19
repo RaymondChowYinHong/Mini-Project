@@ -1,3 +1,7 @@
+//Name:
+//USM Email: 
+//GitHub Username: 
+//Matric No.:
 #ifndef FOODDRINK_HPP
 #define FOODDRINK_HPP
 
@@ -7,7 +11,7 @@ using namespace std;
 
 void display_fooddrink_menu()
 {
-    cout<<"Select your choice."<<endl;
+    cout<<"Select your food or drink choice."<<endl;
     cout<<" 1. Chicken Rice\t\tRM 8\n 2. Ginger Fish With Brown Rice\tRM 12\n 3. Chicken Croissant\t\tRM 6\n 4. Nasi Lemak\t\t\tRM 4\n 5. Fish Fillet With Brown Rice\tRM 9\n 6. Apple Juice\t\t\tRM 3\n";
 }
 
@@ -24,6 +28,7 @@ double Calc_fooddrink_charge(double fooddrink_charge, int counter, int &submenu_
                 cin.ignore();
             }
 
+            display_tittle();
             display_fooddrink_menu();
             cin>> fooddrink_choice;
             cout << endl;

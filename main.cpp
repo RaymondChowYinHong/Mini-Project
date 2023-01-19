@@ -87,8 +87,7 @@ int main()
 {
     char new_patient = 'Y';
     int choice_new_patient;
-         
-    
+
     while(new_patient!='N')
     {      
         LOGIN_REGISTER();
@@ -111,7 +110,7 @@ int main()
             int submenu_choice;
             double amount;
 
-            do
+            do//Keep looping until the user cin corret data type and value
             {
                 if(cin.fail())
                 {
@@ -119,6 +118,7 @@ int main()
                     cin.ignore();
                 }
 
+                display_tittle();
                 display_menu();
                 cin>> menu_choice;
                 cout << endl;
@@ -204,7 +204,8 @@ int main()
                     cout<<"Select item on the menu only."<<endl;
                     break;
 
-            
+            // 'if' statement below is to create a temoprary DMA to store menu choice from old DMA
+            // Then, the 'if' statement will assign the temoprary DMA to newly created DMA with same name as old DMA
             if( menu_choice==1 || menu_choice == 2 || menu_choice == 3|| menu_choice==4|| menu_choice ==5)
             {
                 int size = counter;
@@ -223,6 +224,8 @@ int main()
                 
             }
 
+            // 'if' statement below is to create a temoprary DMA to store submenu choice from old DMA
+            // Then, the 'if' statement will assign the temoprary DMA to newly created DMA with same name as old DMA
             if( menu_choice==1 || menu_choice == 2 || menu_choice == 3|| menu_choice==4|| menu_choice ==5)
             {
                 int size = counter;
@@ -241,6 +244,8 @@ int main()
                 
             }
 
+            // 'if' statement below is to create a temoprary DMA to store amount from old DMA
+            // Then, the 'if' statement will assign the temoprary DMA to newly created DMA with same name as old DMA
             if( menu_choice==1 || menu_choice == 2 || menu_choice == 3|| menu_choice==4|| menu_choice ==5)
             {
                 int size = counter;
@@ -266,9 +271,8 @@ int main()
         delete []menu_choice_array;
         delete []submenu_choice_array;
         delete []amount_array;
-
-
-            
+    
+        //check if there is any new patient
         choice_new_patient = Check_new_patient();
 
         switch(choice_new_patient)

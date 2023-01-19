@@ -1,3 +1,7 @@
+//Name: Raymond Chow Yin Hong
+//USM Email: raymondchow@student.usm.my
+//GitHub Username: RaymondChowYinHong
+//Matric No.: 165011
 #ifndef CHECKPATIENT_HPP
 #define CHECKPATIENT_HPP
 
@@ -22,6 +26,7 @@ int Check_new_patient()
                 cin.ignore();
             }
 
+            display_tittle();
             display_checkpatient_menu();
             cin >> choice_new_patient;
             cout << endl;

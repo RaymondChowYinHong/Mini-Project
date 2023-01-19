@@ -1,3 +1,7 @@
+//Name:
+//USM Email: 
+//GitHub Username: 
+//Matric No.:
 #ifndef HOSPITALSTAY_HPP
 #define HOSPITALSTAY_HPP
 
@@ -7,7 +11,7 @@ using namespace std;
 
 void display_hospitalstay_menu()
 {
-    cout<<"Select your choice."<<endl;
+    cout<<"Select your hospital stay choice."<<endl;
     cout<<" 1. ICU\t\t\tRM 265\n 2. HDU\t\t\tRM 185\n 3. Single Deluxe\tRM 600\n 4. Single Standard\tRM 300\n 5. Double Bedded\tRM 160\n 6. 4-Bedded\t\tRM 120\n";
 }
 
@@ -24,6 +28,7 @@ double Calc_hospitalstay_charge(double hospitalstay_charge, int counter, int &su
                 cin.ignore();
             }
 
+            display_tittle();
             display_hospitalstay_menu();
             cin>> hospitalstay_choice;
             cout << endl;

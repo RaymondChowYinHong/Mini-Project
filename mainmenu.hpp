@@ -1,8 +1,23 @@
+//Name: Raymond Chow Yin Hong
+//USM Email: raymondchow@student.usm.my
+//GitHub Username: RaymondChowYinHong
+//Matric No.: 165011
 #ifndef MAINMENU_HPP
 #define MAINMENU_HPP
 
 #include <iostream>
 using namespace std;
+
+void display_tittle()
+{
+    cout << "                           Welcome to EEE123 Group 12 Hospital " <<endl;
+    for(size_t i = 0; i < 100; i++)
+    {
+        cout << "-";
+    }
+
+    cout << endl;
+}
 
 void display_menu()
 {

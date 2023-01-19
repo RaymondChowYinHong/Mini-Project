@@ -1,3 +1,7 @@
+//Name:
+//USM Email: 
+//GitHub Username: 
+//Matric No.: 
 #ifndef SURGERY_HPP
 #define SURGERY_HPP
 
@@ -7,7 +11,7 @@ using namespace std;
 
 void display_surgery_menu()
 {
-    cout<<"Select your choice."<<endl;
+    cout<<"Select your surgery choice."<<endl;
     cout<<" 1. Angiogram\t\t\tRM 200\n 2. Coronary Bypass\t\tRM 4000\n 3. Knee Replacement Surgery\tRM 10000\n 4. Spine Surgery\t\tRM 8000\n 5. Kidney Stone\t\tRM 3000\n 6. Chemotherapy\t\tRM 200\n";
 }
 
@@ -24,6 +28,7 @@ double Calc_surgery_charge(double surgery_charge, int counter, int &submenu_choi
                 cin.ignore();
             }
             
+            display_tittle();
             display_surgery_menu();
             cin>> surgery_choice;
             cout << endl;

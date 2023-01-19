@@ -1,6 +1,10 @@
+//Name: Raymond Chow Yin Hong
+//USM Email: raymondchow@student.usm.my
+//GitHub Username: RaymondChowYinHong
+//Matric No.: 165011
 bool IsloggedIn();
 int LOGIN_REGISTER ();
-                
+
 void display_menu();
 
 void display_medcine_menu();
