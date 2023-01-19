@@ -1,3 +1,4 @@
+void display_tittle();
 void display_menu();
 
 void display_medcine_menu();

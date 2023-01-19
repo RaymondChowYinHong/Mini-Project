@@ -24,6 +24,7 @@ double Calc_fooddrink_charge(double fooddrink_charge, int counter, int &submenu_
                 cin.ignore();
             }
 
+            display_tittle();
             display_fooddrink_menu();
             cin>> fooddrink_choice;
             cout << endl;

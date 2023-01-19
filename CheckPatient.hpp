@@ -22,6 +22,7 @@ int Check_new_patient()
                 cin.ignore();
             }
 
+            display_tittle();
             display_checkpatient_menu();
             cin >> choice_new_patient;
             cout << endl;

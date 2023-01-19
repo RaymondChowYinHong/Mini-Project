@@ -24,6 +24,7 @@ double Calc_hospitalstay_charge(double hospitalstay_charge, int counter, int &su
                 cin.ignore();
             }
 
+            display_tittle();
             display_hospitalstay_menu();
             cin>> hospitalstay_choice;
             cout << endl;

@@ -24,6 +24,7 @@ double Calc_service_charge(double service_charge, int counter, int &submenu_choi
                 cin.ignore();
             }
             
+            display_tittle();
             display_service_menu();
             cin>> service_choice;
             cout << endl;

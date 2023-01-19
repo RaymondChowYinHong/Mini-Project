@@ -4,6 +4,17 @@
 #include <iostream>
 using namespace std;
 
+void display_tittle()
+{
+    cout << " Welcome to EEE123 Group 12 Hospital " <<endl;
+    for(size_t i = 0; i < 100; i++)
+    {
+        cout << "_";
+    }
+
+    cout << endl;
+}
+
 void display_menu()
 {
     cout<<"Select your choice."<<endl;

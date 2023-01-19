@@ -113,6 +113,7 @@ int main()
                     cin.ignore();
                 }
 
+                display_tittle();
                 display_menu();
                 cin>> menu_choice;
                 cout << endl;

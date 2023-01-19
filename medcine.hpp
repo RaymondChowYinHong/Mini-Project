@@ -23,6 +23,7 @@ double Calc_medcine_charge(double medcine_charge, int counter, int &submenu_choi
                 cin.ignore();
             }
 
+            display_tittle();
             display_medcine_menu();
             cin>> medcine_choice;
             cout << endl;

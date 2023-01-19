@@ -24,6 +24,7 @@ double Calc_surgery_charge(double surgery_charge, int counter, int &submenu_choi
                 cin.ignore();
             }
             
+            display_tittle();
             display_surgery_menu();
             cin>> surgery_choice;
             cout << endl;
