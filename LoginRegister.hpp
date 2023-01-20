@@ -60,6 +60,7 @@ int LOGIN_REGISTER()
        else 
        {
            cout<<"Successfully Logged in"<<endl;
+           cout << endl;
            login_status = 'Y';
         
        }
@@ -75,10 +76,10 @@ int LOGIN_REGISTER()
 
 void Register()
 {
-        string username, password;
+        string identification, password;
 
-        cout << "select a username :";
-        cin >> username;
+        cout << "select a ID :";
+        cin >> identification;
         cout << "select a password :";
         cin >> password;
 
@@ -86,7 +87,7 @@ void Register()
 
 
         ofstream write("data.txt", ios::app);
-        write << username << endl;
+        write << identification << endl;
         write << password << endl;
         write.close();
 }
@@ -99,12 +100,12 @@ void Register()
 
 bool IsloggedIn()
 {
-    string username, password, un, pw; //last two are comparison string
+    string identification, password, id, pw; //last two are comparison string
     int file_counter = 0;
     bool status = false;
 
-    cout << "Enter username :";
-    cin >> username;
+    cout << "Enter ID :";
+    cin >> identification;
 
     cout << "Enter password :";
     cin >> password;
@@ -119,23 +120,23 @@ bool IsloggedIn()
 
     while (!read.eof( ))      //if not at end of file, continue reading numbers
      {
-        getline(read, un);//for reading the user name is that user valid
+        getline(read, id);//for reading the user name is that user valid
         getline(read, pw);//reading the password correct or not
         file_counter++;
      }
 
      read.close();
 
-     string array_un[file_counter], array_pw[file_counter];
+     string array_id[file_counter], array_pw[file_counter];
 
     ifstream read_again("data.txt"); //here data.txt where our data will save for us 
 
 
      for(size_t i = 0; i < file_counter; i++)
      {
-        getline(read_again, un);//for reading the user name is that user valid
+        getline(read_again, id);//for reading the user name is that user valid
         getline(read_again, pw);//reading the password correct or not
-        array_un[i]=un;
+        array_id[i]=id;
         array_pw[i]=pw;
      }
 
@@ -145,7 +146,7 @@ bool IsloggedIn()
 
     for(size_t j = 0; j <file_counter; j++)
     {
-        if (array_un[j] == username && array_pw[j] == password)
+        if (array_id[j] == identification && array_pw[j] == password)
         {
         
             status = true;   //that the user is valid and can log in

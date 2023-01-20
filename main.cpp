@@ -3,8 +3,9 @@
 //GitHub Username: RaymondChowYinHong
 //Matric No.: 165011
 #include <iostream>
-#include "LoginRegister.hpp"
+#include <string>
 #include "main.hpp"
+#include "LoginRegister.hpp"
 #include "mainmenu.hpp"
 #include "medcine.hpp"
 #include "surgery.hpp"
@@ -96,7 +97,7 @@ int main()
         char exit_status = 'N';
 
         Person Patient;
-
+        
         int counter = 0;
 
         int* menu_choice_array = new int[1];
@@ -186,12 +187,16 @@ int main()
                     break;
                 case 6:
 
+                    cout << "                           Thank You for Coming " <<endl;
+                    for(size_t i = 0; i < 100; i++)
+                    {
+                        cout << "-";
+                    }
+                    cout << endl;
+
                     for(size_t j = 0; j < counter; j++)
                     {
-                        menu_choice = menu_choice_array[j];
-                        submenu_choice = submenu_choice_array[j];
-                        amount = amount_array[j];
-                        Display_patient_item(menu_choice, submenu_choice, amount, j);
+                        Display_patient_item(menu_choice_array[j], submenu_choice_array[j], amount_array[j], j);
                     }
 
                     charge = Calc_Total_Charge(Patient.get_medcine_charge(), Patient.get_surgery_charge(), Patient.get_service_charge(), Patient.get_hospitalstay_charge(), Patient.get_fooddrink_charge());
