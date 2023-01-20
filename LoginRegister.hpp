@@ -10,44 +10,11 @@ using namespace std;
 #include <iostream>
 #include <fstream> //because here we are going to use file handling
 #include <cstring>
+#include <string>
 #include "mainmenu.hpp"
+#include "main.hpp"
 using namespace std;
 
-//this below is for verifying are you create an account or not
-//so here we use bool value that always returns true or false
-//if you have account this means true and else false
-
-//verify logged in or not
-
-bool IsloggedIn()
-{
-    string username, password, un, pw; //last two are comparison string
-
-    cout << "Enter username :";
-    cin >> username;
-
-    cout << "Enter password :";
-    cin >> password;
-
-    //for reading file that you have account or not
-    //if stream for reading the file
-    //read is variable here
-    ifstream read("data.txt"); //here data.txt where our data will save for us 
-    //the file name is written in double cout in file handling
-    getline(read, un); //for reading the user name is that user valid
-    getline(read, pw); //reading the password correct or not
-
-    //comparison
-
-    if (un == username && pw == password)
-    {
-        return true;   //that the user is valid and can log in
-    }
-    else
-    {
-        return false;
-    }
-}
 
 int LOGIN_REGISTER()
 {
@@ -64,29 +31,17 @@ int LOGIN_REGISTER()
             cin.ignore();
         }
         display_tittle();
+        cout << "Omly registered officer can use this system." << endl;
         cout << "1 : Register \n2 : Login\nYour choice :";
         cin>>choice;
         }while(choice!=1 && choice!=2);
     
     if (choice == 1)
     {
-        string username, password;
+        Register();
 
-        cout << "select a username :";
-        cin >> username;
-        cout << "select a password :";
-        cin >> password;
-
-        ofstream file;
-        //open file help of open function
-        file.open("data.txt");
-
-  //rewrite in the file
-        file<<username<<endl<<password; //the data is registered into our file
-        file.close();
-        //LOGIN_REGISTER();
-    //return here main because then again we going to logged in
-    //then we go ahead and register another one so:
+//     //return here main because then again we going to logged in
+//     //then we go ahead and register another one so:
     
     }
 
@@ -117,6 +72,90 @@ int LOGIN_REGISTER()
 
     return 0;
 }
+
+void Register()
+{
+        string username, password;
+
+        cout << "select a username :";
+        cin >> username;
+        cout << "select a password :";
+        cin >> password;
+
+
+
+
+        ofstream write("data.txt", ios::app);
+        write << username << endl;
+        write << password << endl;
+        write.close();
+}
+
+//this below is for verifying are you create an account or not
+//so here we use bool value that always returns true or false
+//if you have account this means true and else false
+
+//verify logged in or not
+
+bool IsloggedIn()
+{
+    string username, password, un, pw; //last two are comparison string
+    int file_counter = 0;
+    bool status = false;
+
+    cout << "Enter username :";
+    cin >> username;
+
+    cout << "Enter password :";
+    cin >> password;
+
+    //for reading file that you have account or not
+    //if stream for reading the file
+    //read is variable here
+    ifstream read("data.txt"); //here data.txt where our data will save for us 
+    //the file name is written in double cout in file handling
+
+
+
+    while (!read.eof( ))      //if not at end of file, continue reading numbers
+     {
+        getline(read, un);//for reading the user name is that user valid
+        getline(read, pw);//reading the password correct or not
+        file_counter++;
+     }
+
+     read.close();
+
+     string array_un[file_counter], array_pw[file_counter];
+
+    ifstream read_again("data.txt"); //here data.txt where our data will save for us 
+
+
+     for(size_t i = 0; i < file_counter; i++)
+     {
+        getline(read_again, un);//for reading the user name is that user valid
+        getline(read_again, pw);//reading the password correct or not
+        array_un[i]=un;
+        array_pw[i]=pw;
+     }
+
+     read_again.close();
+
+    //comparison
+
+    for(size_t j = 0; j <file_counter; j++)
+    {
+        if (array_un[j] == username && array_pw[j] == password)
+        {
+        
+            status = true;   //that the user is valid and can log in
+        }
+    }
+    return status;
+
+
+}
+
 
 
 #endif

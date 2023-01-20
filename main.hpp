@@ -2,8 +2,10 @@
 //USM Email: raymondchow@student.usm.my
 //GitHub Username: RaymondChowYinHong
 //Matric No.: 165011
-bool IsloggedIn();
+
 int LOGIN_REGISTER ();
+void Register();
+bool IsloggedIn();
 
 void display_tittle();
 void display_menu();
