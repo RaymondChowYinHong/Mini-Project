@@ -88,10 +88,10 @@ int main()
     char new_patient = 'Y';
     int choice_new_patient;
 
+    LOGIN_REGISTER();
+
     while(new_patient!='N')
-    {      
-        LOGIN_REGISTER();
-       
+    {  
 
         char exit_status = 'N';
 
