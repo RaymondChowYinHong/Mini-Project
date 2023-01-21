@@ -16,7 +16,7 @@ void display_medcine_menu()
     cout << " 3. Glucovance(metformin+glyburide) 5 mg tablet    RM 2.00 \n";
     cout << " 4. Diamicron(gliclazide)80 mg tablet              RM 1.00 \n";
     cout << " 5. Noten(atenolol)50 mg tablet                    RM 0.50 \n";
-    cout << " 6. Ventolin 2.5 mg dose                           RM 4.00 " << endl;
+    cout << " 6. Ventolin 2.5 mg dose                           RM 4.00 \n";
 }
 
 double Calc_medcine_charge(double medcine_charge, int counter, int &submenu_choice, double &amount)
