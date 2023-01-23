@@ -65,32 +65,32 @@ double Calc_fooddrink_charge(double fooddrink_charge, int counter, int &submenu_
     switch(fooddrink_choice)
     {
             case 1:
-                cout << (counter+1) << ". Chicken Rice RM" << frequency*8 << endl;
+                cout << (counter+1) << ". Chicken Rice RM8*" << frequency << "= RM" << frequency*8 << endl;
                 fooddrink_charge = fooddrink_charge + frequency*8;
                 cout << endl;
                 break;
             case 2:
-                cout << (counter+1) << ". Ginger Fish With Brown Rice RM" << frequency*12 << endl;
+                cout << (counter+1) << ". Ginger Fish With Brown Rice RM12*" << frequency << "= RM" << frequency*12 << endl;
                 fooddrink_charge = fooddrink_charge + frequency*12;
                 cout << endl;
                 break;
             case 3:
-                cout << (counter+1) << ". Chicken Croissant RM" << frequency*6 << endl;
+                cout << (counter+1) << ". Chicken Croissant RM6*" << frequency << "= RM" << frequency*6 << endl;
                 fooddrink_charge = fooddrink_charge + frequency*6;
                 cout << endl;
                 break;
             case 4:
-                cout << (counter+1) << ". Nasi Lemak RM" << frequency*4 << endl;
+                cout << (counter+1) << ". Nasi Lemak RM4*" << frequency << "= RM" << frequency*4 << endl;
                 fooddrink_charge = fooddrink_charge + frequency*4;
                 cout << endl;
                 break;
             case 5:
-                cout << (counter+1) << ". Fish Fillet With Brown Rice RM" << frequency*9 << endl;
+                cout << (counter+1) << ". Fish Fillet With Brown Rice RM9*" << frequency << "= RM" << frequency*9 << endl;
                 fooddrink_charge = fooddrink_charge + frequency*9;
                 cout << endl;
                 break;
             case 6:
-                cout << (counter+1) << ". Apple Juice RM" << frequency*3 << endl;
+                cout << (counter+1) << ". Apple Juice RM3*" << frequency << "= RM" << frequency*3 << endl;
                 fooddrink_charge = fooddrink_charge + frequency*3;
                 cout << endl;
                 break;

@@ -65,32 +65,32 @@ double Calc_hospitalstay_charge(double hospitalstay_charge, int counter, int &su
     switch(hospitalstay_choice)
     {
             case 1:
-                cout << (counter+1) << ". ICU RM" << frequency*265 << endl;
+                cout << (counter+1) << ". ICU RM265*" << frequency << "= RM" << frequency*265 << endl;
                 hospitalstay_charge = hospitalstay_charge + frequency*265;
                 cout << endl;
                 break;
             case 2:
-                cout << (counter+1) << ". HDU RM" << frequency*185 << endl;
+                cout << (counter+1) << ". HDU RM185*" << frequency << "= RM" << frequency*185 << endl;
                 hospitalstay_charge = hospitalstay_charge + frequency*185;
                 cout << endl;
                 break;
             case 3:
-                cout << (counter+1) << ". Single Deluxe RM" << frequency*600 << endl;
+                cout << (counter+1) << ". Single Deluxe RM600*" << frequency << "= RM" << frequency*600 << endl;
                 hospitalstay_charge = hospitalstay_charge + frequency*600;
                 cout << endl;
                 break;
             case 4:
-                cout << (counter+1) << ". Single Standard RM" << frequency*300 << endl;
+                cout << (counter+1) << ". Single Standard RM300*" << frequency << "= RM" << frequency*300 << endl;
                 hospitalstay_charge = hospitalstay_charge + frequency*300;
                 cout << endl;
                 break;
             case 5:
-                cout << (counter+1) << ". Double Bedded RM" << frequency*160 << endl;
+                cout << (counter+1) << ". Double Bedded RM160*" << frequency << "= RM" << frequency*160 << endl;
                 hospitalstay_charge = hospitalstay_charge + frequency*160;
                 cout << endl;
                 break;
             case 6:
-                cout << (counter+1) << ". 4-Bedded RM" << frequency*120 << endl;
+                cout << (counter+1) << ". 4-Bedded RM120*" << frequency << "= RM" << frequency*120 << endl;
                 hospitalstay_charge = hospitalstay_charge + frequency*120;
                 cout << endl;
                 break;

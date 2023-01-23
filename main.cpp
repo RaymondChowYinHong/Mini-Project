@@ -2,6 +2,8 @@
 //USM Email: raymondchow@student.usm.my
 //GitHub Username: RaymondChowYinHong
 //Matric No.: 165011
+
+//This program will calculate patient's total charge based on their speding at medcine, surgery, service, hospital stay and food drink.
 #include <iostream>
 #include <string>
 #include "main.hpp"
@@ -91,7 +93,7 @@ int main()
 
     LOGIN_REGISTER();
 
-    while(new_patient!='N')
+    while(new_patient!='N')//Keep looping until there is no more new patient
     {  
 
         char exit_status = 'N';
@@ -100,13 +102,14 @@ int main()
         
         int counter = 0;
 
+        //Create DMA to store patient's choices for main menu, submenu and amount
         int* menu_choice_array = new int[1];
         int* submenu_choice_array = new int[1];
         double* amount_array = new double[1];
    
 
 
-        do{
+        do{//Keep looping until there is no more item to be calculated
             int menu_choice;
             int submenu_choice;
             double amount;
@@ -133,58 +136,78 @@ int main()
                 case 1:
                     //medcine
                     menu_choice_array[counter] = menu_choice;
-                    charge = Calc_medcine_charge(Patient.get_medcine_charge(), counter, submenu_choice, amount);
+                    charge = Calc_medcine_charge(Patient.get_medcine_charge(), counter, submenu_choice, amount);// get medcine charge
                     Patient.set_medcine_charge(charge);
                     submenu_choice_array[counter]= submenu_choice;
                     amount_array[counter] = amount;
+
+                    //Enable code below for testing purpose
                     //cout<<submenu_choice_array[counter]<<endl;
                     //cout<<amount_array[counter]<<endl;
+
                     counter++;
                     break;
+
                 case 2:
                     //surgery
                     menu_choice_array[counter] = menu_choice;
-                    charge = Calc_surgery_charge(Patient.get_surgery_charge(), counter, submenu_choice, amount);
+                    charge = Calc_surgery_charge(Patient.get_surgery_charge(), counter, submenu_choice, amount);// get surgery charge
                     Patient.set_surgery_charge(charge);
                     submenu_choice_array[counter]= submenu_choice;
                     amount_array[counter] = amount;
+
+                    //Enable code below for testing purpose
                     //cout<<submenu_choice_array[counter]<<endl;
                     //cout<<amount_array[counter]<<endl;
+
                     counter++;
                     break;
+
                 case 3:
                     //service
                     menu_choice_array[counter] = menu_choice;
-                    charge = Calc_service_charge(Patient.get_service_charge(), counter, submenu_choice, amount);
+                    charge = Calc_service_charge(Patient.get_service_charge(), counter, submenu_choice, amount);//get service charge
                     Patient.set_service_charge(charge);
                     submenu_choice_array[counter]= submenu_choice;
                     amount_array[counter] = amount;
+
+                    //Enable code below for testing purpose
                     //cout<<submenu_choice_array[counter]<<endl;
                     //cout<<amount_array[counter]<<endl;
+
                     counter++;
                     break;
+
                 case 4:
                     //hospital stay
                     menu_choice_array[counter] = menu_choice;
-                    charge = Calc_hospitalstay_charge(Patient.get_hospitalstay_charge(), counter, submenu_choice, amount);
+                    charge = Calc_hospitalstay_charge(Patient.get_hospitalstay_charge(), counter, submenu_choice, amount);//get hospital stay charge
                     Patient.set_hospitalstay_charge(charge);
                     submenu_choice_array[counter]= submenu_choice;
                     amount_array[counter] = amount;
+
+                    //Enable code below for testing purpose
                     //cout<<submenu_choice_array[counter]<<endl;
                     //cout<<amount_array[counter]<<endl;
+
                     counter++;
                     break;
+
                 case 5:
                     //food and drink
                     menu_choice_array[counter] = menu_choice;
-                    charge = Calc_fooddrink_charge(Patient.get_fooddrink_charge(), counter, submenu_choice, amount);
+                    charge = Calc_fooddrink_charge(Patient.get_fooddrink_charge(), counter, submenu_choice, amount);// get food drink charge
                     Patient.set_fooddrink_charge(charge);
                     submenu_choice_array[counter]= submenu_choice;
                     amount_array[counter] = amount;
+
+                    //Enable code below for testing purpose
                     //cout<<submenu_choice_array[counter]<<endl;
                     //cout<<amount_array[counter]<<endl;
+
                     counter++;
                     break;
+
                 case 6:
 
                     cout << "                           Thank You for Coming " <<endl;
@@ -196,9 +219,10 @@ int main()
 
                     for(size_t j = 0; j < counter; j++)
                     {
-                        Display_patient_item(menu_choice_array[j], submenu_choice_array[j], amount_array[j], j);
+                        Display_patient_item(menu_choice_array[j], submenu_choice_array[j], amount_array[j], j);// list out the purchased items
                     }
 
+                    //Get total charge form Calc_Total_Charge Function
                     charge = Calc_Total_Charge(Patient.get_medcine_charge(), Patient.get_surgery_charge(), Patient.get_service_charge(), Patient.get_hospitalstay_charge(), Patient.get_fooddrink_charge());
                     Patient.set_Total_Charge(charge);
                     cout << "Total charges= RM"<< Patient.get_Total_Charge() << endl;
@@ -273,6 +297,7 @@ int main()
 
         }while(exit_status!='Y' || cin.fail());
 
+        //delete dma for storing menu choice, submenu choice and maount
         delete []menu_choice_array;
         delete []submenu_choice_array;
         delete []amount_array;

@@ -65,32 +65,32 @@ double Calc_surgery_charge(double surgery_charge, int counter, int &submenu_choi
     switch(surgery_choice)
     {
             case 1:
-                cout << (counter+1) << ". Angiogram RM" << frequency*200 << endl;
+                cout << (counter+1) << ". Angiogram RM200*" << frequency << "= RM" << frequency*200 << endl;
                 surgery_charge = surgery_charge + frequency*200;
                 cout << endl;
                 break;
             case 2:
-                cout << (counter+1) << ". Coronary Bypass RM" << frequency*4000 << endl;
+                cout << (counter+1) << ". Coronary Bypass RM4000*" << frequency << "= RM" << frequency*4000 << endl;
                 surgery_charge = surgery_charge + frequency*4000;
                 cout << endl;
                 break;
             case 3:
-                cout << (counter+1) << ". Knee Replacement Surgery RM" << frequency*10000 << endl;
+                cout << (counter+1) << ". Knee Replacement Surgery RM10000*" << frequency << "= RM" << frequency*10000 << endl;
                 surgery_charge = surgery_charge + frequency*10000;
                 cout << endl;
                 break;
             case 4:
-                cout << (counter+1) << ". Spine Surgery RM" << frequency*8000 << endl;
+                cout << (counter+1) << ". Spine Surgery RM8000*" << frequency << "= RM" << frequency*8000 << endl;
                 surgery_charge = surgery_charge + frequency*8000;
                 cout << endl;
                 break;
             case 5:
-                cout << (counter+1) << ". Kidney Stone RM" << frequency*3000 << endl;
+                cout << (counter+1) << ". Kidney Stone RM3000*" << frequency << "= RM" << frequency*3000 << endl;
                 surgery_charge = surgery_charge + frequency*3000;
                 cout << endl;
                 break;
             case 6:
-                cout << (counter+1) << ". Chemotherapy RM" << frequency*200 << endl;
+                cout << (counter+1) << ". Chemotherapy RM200*" << frequency << "= RM" << frequency*200 << endl;
                 surgery_charge = surgery_charge + frequency*200;
                 cout << endl;
                 break;

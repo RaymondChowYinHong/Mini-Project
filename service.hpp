@@ -70,37 +70,37 @@ double Calc_service_charge(double service_charge, int counter, int &submenu_choi
     switch(service_choice)
     {
             case 1:
-                cout << (counter+1) << ". Consultation RM" << frequency*1 << endl ;
+                cout << (counter+1) << ". Consultation RM1*" << frequency << "= RM" << frequency*1 << endl ;
                 service_charge += frequency*1 ;
                 cout << endl ;
                 break ;
 
             case 2:
-                cout << (counter+1) << ". X_Ray RM" << frequency*35 << endl ;
+                cout << (counter+1) << ". X_Ray RM35*" << frequency << "= RM" << frequency*35 << endl ;
                 service_charge += frequency*35 ;
                 cout << endl ;
                 break ;
 
             case 3:
-                cout << (counter+1) << ". Ultrasound RM" << frequency*10 << endl ;
+                cout << (counter+1) << ". Ultrasound RM10*" << frequency << "= RM" << frequency*10 << endl ;
                 service_charge += frequency*10 ;
                 cout << endl ;
                 break ;
 
             case 4:
-                cout << (counter+1) << ". Angiography RM" << frequency*75 << endl ;
+                cout << (counter+1) << ". Angiography RM75*" << frequency << "= RM" << frequency*75 << endl ;
                 service_charge += frequency*75 ;
                 cout << endl ;
                 break ;
 
             case 5:
-                cout << (counter+1) << ". Blood Test RM" << frequency*1 << endl ;
+                cout << (counter+1) << ". Blood Test RM1*" << frequency << "= RM" << frequency*1 << endl ;
                 service_charge += frequency*1 ;
                 cout << endl ;
                 break ;
 
             case 6:
-                cout << (counter+1) << ". CT Scan RM" << frequency*450 << endl ;
+                cout << (counter+1) << ". CT Scan RM450*" << frequency << "= RM" << frequency*450 << endl ;
                 service_charge += frequency*450 ;
                 cout << endl ;
                 break ;
