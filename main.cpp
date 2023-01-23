@@ -233,6 +233,7 @@ int main()
                     cout<<"Select item on the menu only."<<endl;
                     break;
 
+            //Increase size of DMA
             // 'if' statement below is to create a temoprary DMA to store menu choice from old DMA
             // Then, the 'if' statement will assign the temoprary DMA to newly created DMA with same name as old DMA
             if( menu_choice==1 || menu_choice == 2 || menu_choice == 3|| menu_choice==4|| menu_choice ==5)
@@ -253,6 +254,7 @@ int main()
                 
             }
 
+            // Increase size of DMA
             // 'if' statement below is to create a temoprary DMA to store submenu choice from old DMA
             // Then, the 'if' statement will assign the temoprary DMA to newly created DMA with same name as old DMA
             if( menu_choice==1 || menu_choice == 2 || menu_choice == 3|| menu_choice==4|| menu_choice ==5)
@@ -273,6 +275,7 @@ int main()
                 
             }
 
+            // Increase Size of DMA
             // 'if' statement below is to create a temoprary DMA to store amount from old DMA
             // Then, the 'if' statement will assign the temoprary DMA to newly created DMA with same name as old DMA
             if( menu_choice==1 || menu_choice == 2 || menu_choice == 3|| menu_choice==4|| menu_choice ==5)
