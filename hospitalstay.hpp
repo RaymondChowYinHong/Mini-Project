@@ -1,11 +1,13 @@
-//Name:
-//USM Email: 
-//GitHub Username: 
-//Matric No.:
+//Name: MUHAMMAD AMZAR BIN MUHAMAD RUZI
+//USM Email: mohdamzar2002@student.usm.my
+//GitHub Username: Amzar1
+//Matric No.: 162385
 #ifndef HOSPITALSTAY_HPP
 #define HOSPITALSTAY_HPP
 
 #include <iostream>
+#include "main.hpp"
+#include "mainmenu.hpp"
 #include <cmath>
 using namespace std;
 

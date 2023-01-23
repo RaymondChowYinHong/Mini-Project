@@ -6,6 +6,8 @@
 #define CHECKPATIENT_HPP
 
 #include <iostream>
+#include "main.hpp"
+#include "mainmenu.hpp"
 using namespace std;
 
 void display_checkpatient_menu()

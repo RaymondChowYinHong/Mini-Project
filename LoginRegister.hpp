@@ -11,8 +11,8 @@ using namespace std;
 #include <fstream> //because here we are going to use file handling
 #include <cstring>
 #include <string>
-#include "mainmenu.hpp"
 #include "main.hpp"
+#include "mainmenu.hpp"
 using namespace std;
 
 
@@ -53,7 +53,7 @@ int LOGIN_REGISTER()
 
        if(!status)
        {
-          cout<<"Invalid user name or password :"<<endl;
+          cout<<"Invalid user name or password"<<endl;
           login_status = 'N';
 
        }

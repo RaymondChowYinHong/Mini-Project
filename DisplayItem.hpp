@@ -6,6 +6,7 @@
 #define DISPLAYITEM_HPP
 
 #include <iostream>
+#include "main.hpp"
 using namespace std;
 
 

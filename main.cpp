@@ -3,13 +3,13 @@
 //GitHub Username: RaymondChowYinHong
 //Matric No.: 165011
 
-//This program will calculate patient's total charge based on their speding at medcine, surgery, service, hospital stay and food drink.
+//This program will calculate patient's total charge based on their speding at medicine, surgery, service, hospital stay and food drink.
 #include <iostream>
 #include <string>
 #include "main.hpp"
 #include "LoginRegister.hpp"
 #include "mainmenu.hpp"
-#include "medcine.hpp"
+#include "medicine.hpp"
 #include "surgery.hpp"
 #include "service.hpp"
 #include "hospitalstay.hpp"
@@ -23,13 +23,13 @@ using namespace std;
 class Person
 {
     public:
-        void set_medcine_charge(double charge)
+        void set_medicine_charge(double charge)
         {
-            medcine_charge = charge;
+            medicine_charge = charge;
         }
-        double get_medcine_charge()
+        double get_medicine_charge()
         {
-            return medcine_charge;
+            return medicine_charge;
         }
 
         void set_surgery_charge(double charge)
@@ -78,7 +78,7 @@ class Person
         }
     
     private:
-        double medcine_charge=0;
+        double medicine_charge=0;
         double surgery_charge=0;
         double service_charge=0;
         double hospitalstay_charge=0;
@@ -134,10 +134,10 @@ int main()
             switch(menu_choice)
             {
                 case 1:
-                    //medcine
+                    //medicine
                     menu_choice_array[counter] = menu_choice;
-                    charge = Calc_medcine_charge(Patient.get_medcine_charge(), counter, submenu_choice, amount);// get medcine charge
-                    Patient.set_medcine_charge(charge);
+                    charge = Calc_medicine_charge(Patient.get_medicine_charge(), counter, submenu_choice, amount);// get medicine charge
+                    Patient.set_medicine_charge(charge);
                     submenu_choice_array[counter]= submenu_choice;
                     amount_array[counter] = amount;
 
@@ -223,7 +223,7 @@ int main()
                     }
 
                     //Get total charge form Calc_Total_Charge Function
-                    charge = Calc_Total_Charge(Patient.get_medcine_charge(), Patient.get_surgery_charge(), Patient.get_service_charge(), Patient.get_hospitalstay_charge(), Patient.get_fooddrink_charge());
+                    charge = Calc_Total_Charge(Patient.get_medicine_charge(), Patient.get_surgery_charge(), Patient.get_service_charge(), Patient.get_hospitalstay_charge(), Patient.get_fooddrink_charge());
                     Patient.set_Total_Charge(charge);
                     cout << "Total charges= RM"<< Patient.get_Total_Charge() << endl;
                     cout << endl;

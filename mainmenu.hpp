@@ -6,6 +6,7 @@
 #define MAINMENU_HPP
 
 #include <iostream>
+#include "main.hpp"
 using namespace std;
 
 void display_tittle()

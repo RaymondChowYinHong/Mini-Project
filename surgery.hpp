@@ -6,6 +6,8 @@
 #define SURGERY_HPP
 
 #include <iostream>
+#include "main.hpp"
+#include "mainmenu.hpp"
 using namespace std;
 
 

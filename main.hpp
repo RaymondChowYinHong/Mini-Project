@@ -14,9 +14,9 @@ bool IsloggedIn();
 void display_tittle();
 void display_menu();
 
-//medcine
-void display_medcine_menu();
-double Calc_medcine_charge(double , int, int &, double &);
+//medicine
+void display_medicine_menu();
+double Calc_medicine_charge(double , int, int &, double &);
 
 //surgery
 void display_surgery_menu();
