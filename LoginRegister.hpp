@@ -38,11 +38,8 @@ int LOGIN_REGISTER()
     
     if (choice == 1)
     {
-        Register();
+        Register();  //if user not have account and want to register 
 
-//     //return here main because then again we going to logged in
-//     //then we go ahead and register another one so:
-    
     }
 
 //if user have already account and want to log in then
@@ -68,9 +65,6 @@ int LOGIN_REGISTER()
     
     }
 
-    
-    
-
     return 0;
 }
 
@@ -86,7 +80,7 @@ void Register()
 
 
 
-        ofstream write("data.txt", ios::app);
+        ofstream write("data.txt", ios::app); // this is to write user id and password into end of file
         write << identification << endl;
         write << password << endl;
         write.close();
