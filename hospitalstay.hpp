@@ -11,7 +11,7 @@
 #include <cmath>
 using namespace std;
 
-
+//function to display the hospital stay menu
 void display_hospitalstay_menu()
                                                                 {
     cout    << "Select your hospital stay choice."     <<endl;
@@ -23,12 +23,13 @@ void display_hospitalstay_menu()
     cout    << " 6. 4-Bedded\t\tRM 120"                <<endl;
                                                                 }
 
+//function to calculate the hospital stay charge
 double Calc_hospitalstay_charge(double hospitalstay_charges, int counter, int &submenu_choice, double &amount)
 {
     int hospitalstay_choice;
     double amount_hospitalstay;
 
-    for(size_t i = 1; i < 2 ; i++)
+    for(size_t i = 1; i < 2 ; i++)//keep looping until user enter the available option as answer
     {
             if(cin.fail())
             {
@@ -38,9 +39,11 @@ double Calc_hospitalstay_charge(double hospitalstay_charges, int counter, int &s
 
             display_tittle();
             display_hospitalstay_menu();
+            cout << "Your choice:";
             cin>> hospitalstay_choice;
             cout << endl;
 
+            //if statement below is to make sure the for loop will continue if user cin unavailable option
             if(hospitalstay_choice!=1 && hospitalstay_choice!=2 && hospitalstay_choice!=3 && hospitalstay_choice!=4 && hospitalstay_choice!=5 && hospitalstay_choice!=6)
             {
                 cout << "Enter again."<<endl;
@@ -51,14 +54,17 @@ double Calc_hospitalstay_charge(double hospitalstay_charges, int counter, int &s
     
     submenu_choice = hospitalstay_choice;
 
-    for(size_t j = 1; j < 2; j++)
+    for(size_t j = 1; j < 2; j++)//for loop to make sure only logic amount and correct data type to be accepted
     {
              cout    << "Enter the number of days that patient stay."<<endl;
+
+             cout    << "Your choice:";
             
             cin     >>  amount_hospitalstay;
             
             cout                                                    <<endl;
 
+            //if statement below is to make sure the for loop will continue if user cin unlogic option and wrong data type
             if (amount_hospitalstay <0 || cin.fail())
             {
                 cin.clear();
@@ -72,6 +78,7 @@ double Calc_hospitalstay_charge(double hospitalstay_charges, int counter, int &s
     double totalpatientdays = ceil(amount_hospitalstay);
     amount = totalpatientdays;
 
+    //if else statement below will show the item, amount and price purchased by patient
     if(hospitalstay_choice == 1)
     {
         cout << (counter+1) << " ICU RM265*" << totalpatientdays << "= RM" << totalpatientdays*265             << endl;
@@ -118,107 +125,3 @@ double Calc_hospitalstay_charge(double hospitalstay_charges, int counter, int &s
 }
 
 #endif
-// //Name:
-// //USM Email: 
-// //GitHub Username: 
-// //Matric No.:
-// #ifndef HOSPITALSTAY_HPP
-// #define HOSPITALSTAY_HPP
-
-// #include <iostream>
-// using namespace std;
-
-
-// void display_hospitalstay_menu()
-// {
-//     cout<<"Select your hospital stay choice."<<endl;
-//     cout<<" 1. ICU\t\t\tRM 265\n 2. HDU\t\t\tRM 185\n 3. Single Deluxe\tRM 600\n 4. Single Standard\tRM 300\n 5. Double Bedded\tRM 160\n 6. 4-Bedded\t\tRM 120\n";
-// }
-
-// double Calc_hospitalstay_charge(double hospitalstay_charge, int counter, int &submenu_choice, double &amount)
-// {
-//     int hospitalstay_choice;
-//     double amount_hospitalstay;
-
-//     do
-//     {
-//             if(cin.fail())
-//             {
-//                 cin.clear();
-//                 cin.ignore();
-//             }
-
-//             display_tittle();
-//             display_hospitalstay_menu();
-//             cin>> hospitalstay_choice;
-//             cout << endl;
-
-//             if(hospitalstay_choice!=1 && hospitalstay_choice!=2 && hospitalstay_choice!=3 && hospitalstay_choice!=4 && hospitalstay_choice!=5 && hospitalstay_choice!=6)
-//             {
-//                 cout << "Enter again."<<endl;
-//             }
-//     } while (hospitalstay_choice!=1 && hospitalstay_choice!=2 && hospitalstay_choice!=3 && hospitalstay_choice!=4 && hospitalstay_choice!=5 && hospitalstay_choice!=6);
-    
-//     submenu_choice = hospitalstay_choice;
-//     do
-//     {
-//             if(cin.fail())
-//             {
-//                 cin.clear();
-//                 cin.ignore();
-//             }
-            
-//             cout << "Enter frequency(day)."<<endl;
-//             cin>>amount_hospitalstay;
-//             cout << endl;
-
-//             if(amount_hospitalstay <0 || cin.fail())
-//             {
-//                 cout << "Enter again."<<endl;
-//             }
-
-//     } while (amount_hospitalstay <0 || cin.fail());
-
-//     double frequency = amount_hospitalstay;
-//     amount = frequency;
-            
-//     switch(hospitalstay_choice)
-//     {
-//             case 1:
-//                 cout << (counter+1) << ". ICU RM265*" << frequency << "= RM" << frequency*265 << endl;
-//                 hospitalstay_charge = hospitalstay_charge + frequency*265;
-//                 cout << endl;
-//                 break;
-//             case 2:
-//                 cout << (counter+1) << ". HDU RM185*" << frequency << "= RM" << frequency*185 << endl;
-//                 hospitalstay_charge = hospitalstay_charge + frequency*185;
-//                 cout << endl;
-//                 break;
-//             case 3:
-//                 cout << (counter+1) << ". Single Deluxe RM600*" << frequency << "= RM" << frequency*600 << endl;
-//                 hospitalstay_charge = hospitalstay_charge + frequency*600;
-//                 cout << endl;
-//                 break;
-//             case 4:
-//                 cout << (counter+1) << ". Single Standard RM300*" << frequency << "= RM" << frequency*300 << endl;
-//                 hospitalstay_charge = hospitalstay_charge + frequency*300;
-//                 cout << endl;
-//                 break;
-//             case 5:
-//                 cout << (counter+1) << ". Double Bedded RM160*" << frequency << "= RM" << frequency*160 << endl;
-//                 hospitalstay_charge = hospitalstay_charge + frequency*160;
-//                 cout << endl;
-//                 break;
-//             case 6:
-//                 cout << (counter+1) << ". 4-Bedded RM120*" << frequency << "= RM" << frequency*120 << endl;
-//                 hospitalstay_charge = hospitalstay_charge + frequency*120;
-//                 cout << endl;
-//                 break;
-//             default:
-//                 cout << "Enter again."<<endl;
-//                 break;
-//     }
-//     return hospitalstay_charge;
-// }
-
-// #endif

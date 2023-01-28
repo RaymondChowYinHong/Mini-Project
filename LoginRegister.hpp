@@ -22,7 +22,7 @@ int LOGIN_REGISTER()
     int choice;
     char login_status='N';
 
-    while (login_status!='Y')
+    while (login_status!='Y')//will keeping looping if user's ID and Password are incorrect
     {
         do{
         if(cin.fail())
@@ -34,14 +34,11 @@ int LOGIN_REGISTER()
         cout << "Omly registered officer can use this system." << endl;
         cout << "1 : Register \n2 : Login\nYour choice :";
         cin>>choice;
-        }while(choice!=1 && choice!=2);
+        }while(choice!=1 && choice!=2);//keep looping until user enter the available option as answer
     
     if (choice == 1)
     {
-        Register();
-
-//     //return here main because then again we going to logged in
-//     //then we go ahead and register another one so:
+        Register();//function to register user's ID and password
     
     }
 
@@ -51,13 +48,13 @@ int LOGIN_REGISTER()
     
        bool status =IsloggedIn();
 
-       if(!status)
+       if(!status)//if not true means your ID and password are not in txt file
        {
           cout<<"Invalid user name or password"<<endl;
           login_status = 'N';
 
        }
-       else 
+       else //true when your ID and password are found in the txt file
        {
            cout<<"Successfully Logged in"<<endl;
            cout << endl;
@@ -74,6 +71,7 @@ int LOGIN_REGISTER()
     return 0;
 }
 
+//function to register user's ID and password
 void Register()
 {
         string identification, password;
@@ -86,18 +84,16 @@ void Register()
 
 
 
-        ofstream write("data.txt", ios::app);
-        write << identification << endl;
-        write << password << endl;
-        write.close();
+        ofstream write("data.txt", ios::app);//open data.txt file
+        write << identification << endl;//write ID into txt file
+        write << password << endl;//write password into txt file
+        write.close();//close txt file
 }
 
-//this below is for verifying are you create an account or not
+//this below is for verifying your ID and password
 //so here we use bool value that always returns true or false
 //if you have account this means true and else false
-
 //verify logged in or not
-
 bool IsloggedIn()
 {
     string identification, password, id, pw; //last two are comparison string
@@ -127,7 +123,7 @@ bool IsloggedIn()
 
      read.close();
 
-     string array_id[file_counter], array_pw[file_counter];
+     string array_id[file_counter], array_pw[file_counter];// arrays to store ID and password from txt file
 
     ifstream read_again("data.txt"); //here data.txt where our data will save for us 
 
@@ -136,14 +132,13 @@ bool IsloggedIn()
      {
         getline(read_again, id);//for reading the user name is that user valid
         getline(read_again, pw);//reading the password correct or not
-        array_id[i]=id;
-        array_pw[i]=pw;
+        array_id[i]=id;//save ID into array
+        array_pw[i]=pw;//save password into array
      }
 
      read_again.close();
 
     //comparison
-
     for(size_t j = 0; j <file_counter; j++)
     {
         if (array_id[j] == identification && array_pw[j] == password)

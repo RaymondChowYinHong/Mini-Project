@@ -9,7 +9,7 @@
 #include "main.hpp"
 using namespace std;
 
-
+//function to list out all the items purchased by patient
 void Display_patient_item(int menu_choice, int submenu_choice, double amount, size_t j )
 {
     if(menu_choice == 1)

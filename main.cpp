@@ -124,6 +124,7 @@ int main()
 
                 display_tittle();
                 display_menu();
+                cout << "Your choice:";
                 cin>> menu_choice;
                 cout << endl;
 
@@ -210,7 +211,7 @@ int main()
 
                 case 6:
 
-                    cout << "                           Thank You for Coming " <<endl;
+                    cout << "                           Thank You for Coming " <<endl;//display receipt tittle
                     for(size_t i = 0; i < 100; i++)
                     {
                         cout << "-";

@@ -10,12 +10,14 @@
 #include "mainmenu.hpp"
 using namespace std;
 
+// function to display menu to ask availability of new patient
 void display_checkpatient_menu()
 {
     cout << "Any new patient?" << endl;
     cout << "1.Yes\n2.No" << endl;
 }
 
+//function to check for availability of new patient
 int Check_new_patient()
 {
         int choice_new_patient;
@@ -30,10 +32,11 @@ int Check_new_patient()
 
             display_tittle();
             display_checkpatient_menu();
+            cout << "Your choice:";
             cin >> choice_new_patient;
             cout << endl;
 
-        }while(choice_new_patient!=1 && choice_new_patient!=2);
+        }while(choice_new_patient!=1 && choice_new_patient!=2);//make sure only available option to be accepted
 
         return choice_new_patient;
 
