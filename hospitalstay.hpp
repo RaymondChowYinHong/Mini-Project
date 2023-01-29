@@ -11,7 +11,7 @@
 #include <cmath>
 using namespace std;
 
-//function to display the hospital stay menu
+/* Function Purpose  : To list out the hospital stay menu     */
 void display_hospitalstay_menu()
                                                                 {
     cout    << "Select your hospital stay choice."     <<endl;
@@ -23,7 +23,7 @@ void display_hospitalstay_menu()
     cout    << " 6. 4-Bedded\t\tRM 120"                <<endl;
                                                                 }
 
-//function to calculate the hospital stay charge
+/* Function Purpose  : To accept answer for hospital stay choice and calculate the hospital stay charge*/
 double Calc_hospitalstay_charge(double hospitalstay_charges, int counter, int &submenu_choice, double &amount)
 {
     int hospitalstay_choice;

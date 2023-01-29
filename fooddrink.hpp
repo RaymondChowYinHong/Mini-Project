@@ -10,7 +10,7 @@
 #include "mainmenu.hpp"
 using namespace std;
 
-//function to display the food drink menu
+/* Function Purpose  : To list out the food drink menu     */
 void display_fooddrink_menu()
 {
     cout <<" Select your food or drink choice."       << endl;
@@ -22,7 +22,7 @@ void display_fooddrink_menu()
     cout <<" 6. Apple Juice                    RM 3"  << endl;
 }
 
-//function to calculate the food drink charge
+/* Function Purpose  : To accept answer for food drink choice and calculate the food drink charge*/
 double Calc_fooddrink_charge(double fooddrink_charge, int counter, int &submenu_choice, double &amount)
 {
     int fooddrink_choice; int amount_fooddrink;

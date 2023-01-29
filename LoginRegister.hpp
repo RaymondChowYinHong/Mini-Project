@@ -15,7 +15,7 @@ using namespace std;
 #include "mainmenu.hpp"
 using namespace std;
 
-
+/* Function Purpose  : To ask for user choice to register or login*/
 int LOGIN_REGISTER()
 {
    
@@ -68,7 +68,7 @@ int LOGIN_REGISTER()
     return 0;
 }
 
-//function to register user's ID and password
+/* Function Purpose  : To register user's ID and password into txt file*/
 void Register()
 {
         string identification, password;
@@ -91,6 +91,7 @@ void Register()
 //so here we use bool value that always returns true or false
 //if you have account this means true and else false
 //verify logged in or not
+/* Function Purpose  : To check whether the ID and password are available in the txt file*/
 bool IsloggedIn()
 {
     string identification, password, id, pw; //last two are comparison string

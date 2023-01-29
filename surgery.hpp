@@ -10,15 +10,14 @@
 #include "mainmenu.hpp"
 using namespace std;
 
-
-//function to display the type of surgery menu
+/* Function Purpose  : To list out the surgery menu     */
 void display_surgery_menu()
 {
     cout<<"Select your surgery choice."<<endl;
     cout<<" 1. Angiogram\t\t\tRM 200\n 2. Coronary Bypass\t\tRM 4000\n 3. Knee Replacement Surgery\tRM 10000\n 4. Spine Surgery\t\tRM 8000\n 5. Kidney Stone\t\tRM 3000\n 6. Chemotherapy\t\tRM 200\n";
 }
 
-//function to calculate the surgery charge
+/* Function Purpose  : To accept answer for choice of surgery and calculate the surgery charge*/
 double Calc_surgery_charge(double surgery_charge, int counter, int &submenu_choice, double &amount)
 {
     int surgery_choice;

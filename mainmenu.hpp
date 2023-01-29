@@ -9,7 +9,7 @@
 #include "main.hpp"
 using namespace std;
 
-//function to display main tittle
+/* Function Purpose  : To display the tittle*/
 void display_tittle()
 {
     cout << "                           Welcome to EEE123 Group 12 Hospital " <<endl;
@@ -21,7 +21,7 @@ void display_tittle()
     cout << endl;
 }
 
-//function to display type of charges
+/* Function Purpose  : To display the type of charge*/
 void display_menu()
 {
     cout<<"Select your choice."<<endl;

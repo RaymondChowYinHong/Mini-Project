@@ -10,7 +10,7 @@
 #include "mainmenu.hpp"
 using namespace std;
 
-//function to display the medicine menu
+/* Function Purpose  : To list out the medicine menu     */
 void display_medicine_menu()
 {
     cout << "Select your medicine choice.\n";
@@ -22,7 +22,7 @@ void display_medicine_menu()
     cout << " 6. Ventolin 2.5 mg dose                           RM 4.00 \n";
 }
 
-//function to calculate the medicine charge
+/* Function Purpose  : To accept answer for medicine choice and calculate the medicine charge*/
 double Calc_medicine_charge(double medicine_charge, int counter, int &submenu_choice, double &amount)
 {
     int medicine_choice;

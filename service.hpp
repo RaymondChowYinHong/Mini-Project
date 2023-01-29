@@ -10,8 +10,7 @@
 #include "mainmenu.hpp"
 using namespace std;
 
-
-//function to display the type of service menu
+/* Function Purpose  : To list out the service menu     */
 void display_service_menu()
 {
     cout<<"Select your service choice."<< endl;
@@ -23,7 +22,7 @@ void display_service_menu()
     cout<<" 6. CT Scan          RM 450" << endl ;
 }
 
-//function to calculate the service charge
+/* Function Purpose  : To accept answer for choice of service and calculate the service charge*/
 double Calc_service_charge(double service_charge, int counter, int &submenu_choice, double &amount)
 {
     int service_choice, amount_service;

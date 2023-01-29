@@ -10,14 +10,14 @@
 #include "mainmenu.hpp"
 using namespace std;
 
-// function to display menu to ask availability of new patient
+/* Function Purpose  : To display menu to ask availability of new patient     */
 void display_checkpatient_menu()
 {
     cout << "Any new patient?" << endl;
     cout << "1.Yes\n2.No" << endl;
 }
 
-//function to check for availability of new patient
+/* Function Purpose  : To accept answer for availability of new patient and return answer to main function*/
 int Check_new_patient()
 {
         int choice_new_patient;

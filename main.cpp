@@ -301,7 +301,7 @@ int main()
 
         }while(exit_status!='Y' || cin.fail());
 
-        //delete dma for storing menu choice, submenu choice and maount
+        //delete DMA for storing menu choice, submenu choice and maount
         delete []menu_choice_array;
         delete []submenu_choice_array;
         delete []amount_array;
