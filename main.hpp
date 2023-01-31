@@ -3,7 +3,7 @@
 
 //register and login system
 /* Function Prototype prototype Purpose  : To ask for user choice to register or login*/
-int LOGIN_REGISTER ();
+int LOGIN_REGISTER();
 /* Function Prototype Purpose  : To register user's ID and password into txt file*/
 void Register();
 /* Function Prototype Purpose  : To check whether the ID and password are available in the txt file*/

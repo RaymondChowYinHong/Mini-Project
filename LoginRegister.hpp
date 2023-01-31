@@ -32,7 +32,7 @@ int LOGIN_REGISTER()
             cin.ignore();
         }
         display_tittle();
-        cout << "Omly registered officer can use this system." << endl;
+        cout << "Only registered officer can use this system." << endl;
         cout << "1 : Register \n2 : Login\nYour choice :";
         cin>>choice;
         }while(choice!=1 && choice!=2);//keep looping until user enter the available option as answer
