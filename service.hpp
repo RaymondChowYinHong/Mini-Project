@@ -1,7 +1,9 @@
+/* Programmer's info for making this hpp file */
 //Name: Ch'ng Song Shu
 //USM Email: chngsshu@student.usm.my
 //GitHub Username: chngsshu
 //Matric No.: 162734
+
 #ifndef SERVICE_HPP
 #define SERVICE_HPP
 

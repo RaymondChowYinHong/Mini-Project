@@ -1,3 +1,19 @@
+/********************************************************************************/
+/* Mini Project Info		                          	            */
+/* Lecturer Name    : Dr Nor Rizuan Bin Mat Noor                   	            */
+/* Group Number     : 12                                   		                */
+/* Project Title    : Automatic Calculating System For Hospital (Medical bills)	*/
+/* Project Purpose  : To calculate patient's total charges based on medicine,   */
+/*                    surgery, service, hospital stay and food drink.           */
+/* Programmers' Name: Muhammad Amzar Bin Muhamad Ruzi (162385)      			*/
+/*                    Nur Safirah Binti Anuar (162383)                   	    */
+/*                    Raymond Chow Yin Hong (165011)         	                */
+/*                    Ch'ng Song Shu (162734)                  		            */
+/*                    Lee Hooi Ping (162419)    		                        */
+/*                    Ng Poh Qiang (162703) 	                                */
+/********************************************************************************/
+
+/* Programmer's info for making this cpp file */
 //Name: Raymond Chow Yin Hong
 //USM Email: raymondchow@student.usm.my
 //GitHub Username: RaymondChowYinHong
@@ -230,6 +246,7 @@ int main()
                     cout << endl;
                     exit_status = 'Y';
                     break;
+                    
                 default:
                     cout<<"Select item on the menu only."<<endl;
                     break;

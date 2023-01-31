@@ -1,7 +1,9 @@
+/* Programmer's info for making this hpp file */
 //Name: MUHAMMAD AMZAR BIN MUHAMAD RUZI
 //USM Email: mohdamzar2002@student.usm.my
 //GitHub Username: Amzar1
 //Matric No.: 162385
+
 #ifndef HOSPITALSTAY_HPP
 #define HOSPITALSTAY_HPP
 

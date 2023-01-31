@@ -1,7 +1,9 @@
+/* Programmer's info for making this hpp file */
 //Name: Lee Hooi Ping
 //USM Email: lhping@student.usm.my
 //GitHub Username: LEEHOOIPING
 //Matric No.:162419
+
 #ifndef MEDICINE_HPP
 #define MEDICINE_HPP
 

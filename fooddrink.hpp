@@ -1,7 +1,9 @@
+/* Programmer's info for making this hpp file */
 //Name: NUR SAFIRAH BINTI ANUAR
 //USM Email: safirahanuar@student.usm.my
 //GitHub Username: safirahanuar
 //Matric No.: 162383
+
 #ifndef FOODDRINK_HPP
 #define FOODDRINK_HPP
 

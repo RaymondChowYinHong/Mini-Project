@@ -1,7 +1,9 @@
+/* Programmer's info for making this hpp file */
 //Name: Raymond Chow Yin Hong
 //USM Email: raymondchow@student.usm.my
 //GitHub Username: RaymondChowYinHong
 //Matric No.: 165011
+
 #ifndef MAINMENU_HPP
 #define MAINMENU_HPP
 
