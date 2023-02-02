@@ -27,7 +27,6 @@ int Check_new_patient()
         do{
             if(cin.fail())
             {
-                cout<< "Enter again." <<endl;
                 cin.clear();
                 cin.ignore();
             }
