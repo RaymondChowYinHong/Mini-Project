@@ -13,11 +13,6 @@
 /*                    Ng Poh Qiang (162703) 	                                */
 /********************************************************************************/
 
-/* Programmer's info for making this cpp file */
-//Name: Raymond Chow Yin Hong
-//USM Email: raymondchow@student.usm.my
-//GitHub Username: RaymondChowYinHong
-//Matric No.: 165011
 
 //This program will calculate patient's total charge based on their speding at medicine, surgery, service, hospital stay and food drink.
 #include <iostream>
@@ -36,6 +31,12 @@
 
 using namespace std;
 
+
+/* Programmer's info for making this class */
+//Name: Raymond Chow Yin Hong
+//USM Email: raymondchow@student.usm.my
+//GitHub Username: RaymondChowYinHong
+//Matric No.: 165011
 class Person
 {
     public:
@@ -102,6 +103,11 @@ class Person
         double Total_Charge=0;
 };
 
+/* Programmer's info for making this main function */
+//Name: Raymond Chow Yin Hong
+//USM Email: raymondchow@student.usm.my
+//GitHub Username: RaymondChowYinHong
+//Matric No.: 165011
 int main()
 {
     char new_patient = 'Y';

@@ -37,6 +37,12 @@ int Check_new_patient()
             cout << "Your choice:";
             cin >> choice_new_patient;
             cout << endl;
+            
+            
+            if(choice_new_patient!=1 && choice_new_patient!=2)
+            {
+                cout<< "Enter again." <<endl;
+            }
 
         }while(choice_new_patient!=1 && choice_new_patient!=2);//make sure only available option to be accepted
 
