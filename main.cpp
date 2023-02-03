@@ -108,6 +108,7 @@ class Person
 //USM Email: raymondchow@student.usm.my
 //GitHub Username: RaymondChowYinHong
 //Matric No.: 165011
+/* Function Purpose  : To show the flow of program*/
 int main()
 {
     char new_patient = 'Y';
@@ -124,7 +125,7 @@ int main()
         
         int counter = 0;
 
-        //Create DMA to store patient's choices for main menu, submenu and amount
+        //Create 3 pinter array to store patient's choices for main menu, submenu and amount
         int* menu_choice_array = new int[1];
         int* submenu_choice_array = new int[1];
         double* amount_array = new double[1];
@@ -257,7 +258,7 @@ int main()
                     cout<<"Select item on the menu only."<<endl;
                     break;
 
-            //Increase size of DMA
+            //Increase size of pointer array
             // 'if' statement below is to create a temoprary DMA to store menu choice from old DMA
             // Then, the 'if' statement will assign the temoprary DMA to newly created DMA with same name as old DMA
             if( menu_choice==1 || menu_choice == 2 || menu_choice == 3|| menu_choice==4|| menu_choice ==5)
@@ -278,7 +279,7 @@ int main()
                 
             }
 
-            // Increase size of DMA
+            // Increase size of pointer array
             // 'if' statement below is to create a temoprary DMA to store submenu choice from old DMA
             // Then, the 'if' statement will assign the temoprary DMA to newly created DMA with same name as old DMA
             if( menu_choice==1 || menu_choice == 2 || menu_choice == 3|| menu_choice==4|| menu_choice ==5)
@@ -299,7 +300,7 @@ int main()
                 
             }
 
-            // Increase Size of DMA
+            // Increase Size of pointer array
             // 'if' statement below is to create a temoprary DMA to store amount from old DMA
             // Then, the 'if' statement will assign the temoprary DMA to newly created DMA with same name as old DMA
             if( menu_choice==1 || menu_choice == 2 || menu_choice == 3|| menu_choice==4|| menu_choice ==5)
@@ -324,7 +325,7 @@ int main()
 
         }while(exit_status!='Y' || cin.fail());
 
-        //delete DMA for storing menu choice, submenu choice and maount
+        //delete pointer array for storing menu choice, submenu choice and maount
         delete []menu_choice_array;
         delete []submenu_choice_array;
         delete []amount_array;
