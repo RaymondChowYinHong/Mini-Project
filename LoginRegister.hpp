@@ -31,10 +31,16 @@ int LOGIN_REGISTER()
             cin.clear();
             cin.ignore();
         }
+
         display_tittle();
         cout << "Only registered officer can use this system." << endl;
         cout << "1 : Register \n2 : Login\nYour choice :";
         cin>>choice;
+        
+        if(choice!=1 && choice!=2)
+        {
+            cout << "Enter again." << endl ;
+        }
         }while(choice!=1 && choice!=2);//keep looping until user enter the available option as answer
     
     if (choice == 1)
